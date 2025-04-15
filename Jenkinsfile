@@ -13,7 +13,7 @@ pipeline {
         stage('Deploy with Helm') {
             steps {
                 script {
-                    bat 'C:\\ProgramData\\chocolatey\\bin\\helm.exe upgrade --install my-webapp ./webapp --namespace default'
+                    bat 'C:\\ProgramData\\chocolatey\\bin\\helm.exe upgrade --install my-webapp ./webapp --namespace default --values webapp/values.yaml'
                 }
             }
         }
